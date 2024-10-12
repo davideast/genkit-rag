@@ -1,0 +1,165 @@
+---
+model: googleai/gemini-1.5-flash-8b-latest
+config:
+  temperature: 1.0
+input: 
+  schema: string
+output:
+  format: json
+  schema: RaceSchema
+---
+
+Take the following markdown and convert it into an object with the shape shown in the example.
+
+{{input}}
+
+<example>
+{
+  name: "2024 Racin' to Beat Cancer 5k, 10k, & Half",
+  date: new Date('2024-10-12'),
+  time: "7:30 am - 12:00 pm",
+  location: {
+    name: "Burke Lake Park",
+    address: "7315 Ox Rd",
+    city: "Fairfax Station",
+    state: "VA",
+    zip: "22039",
+    latitude: 38.758244,
+    longitude: -77.303988,
+  },
+  organizer: {
+    name: "Bishops Events",
+    email: "BishopsEvents@yahoo.com",
+  },
+  distances: {
+    "5k": {
+      startTime: "8:00am",
+      registrationFee: {
+        early: 30,
+        late: 35,
+        raceDay: 40,
+      },
+      courseMapUrl: "https://bishopsevents.com/burke-lake-park-2/",
+      waterStations: {
+        mileMarkers: [1.1, 2],
+        gatoradeAvailable: true,
+      },
+    },
+    "10k": {
+      startTime: "7:45am",
+      registrationFee: {
+        early: 45,
+        late: 50,
+        raceDay: 55,
+      },
+      courseMapUrl: "https://bishopsevents.com/burke-lake-park-2/",
+      waterStations: {
+        mileMarkers: [1.1, 3.1, 5.1],
+        gatoradeAvailable: true,
+      },
+    },
+    "Half": {
+      startTime: "7:30am",
+      registrationFee: {
+        early: 65,
+        late: 70,
+        raceDay: 75,
+      },
+      courseMapUrl: "https://bishopsevents.com/burke-lake-park-2/",
+      waterStations: {
+        mileMarkers: [1.1, 3.1, 3.5, 5.1, 6.55, 7.65, 9.65, 10, 12],
+        gatoradeAvailable: true,
+      },
+      cutOffTime: "3:15",
+    },
+  },
+  virtualOption: {
+    available: true,
+    infoUrl: "https://bishopsevents.com/virtual-run-info/",
+  },
+  series: ["Year-Long 5k", "10k", "Endurance", "Back of the Pack", "Fall"],
+  charity: {
+    name: "We Rock Cancer",
+    url: "http://www.werockcancer.org/",
+    imageUrl: "https://bishopsevents.com/wp-content/uploads/2021/02/We-Rock-Cancer-300x300.png",
+  },
+  runnerReceives: [
+    "Finisher's Medal",
+    "Technical (Drifit) Event Shirt",
+    "Chip Timed Event",
+  ],
+  tShirt: {
+    designImageUrl:
+      "https://bishopsevents.com/wp-content/uploads/2024/09/Racin-to-Beat-Cancer-5k-FRONT-221x300.jpg",
+    guaranteedUntil: new Date('2024-10-02'),
+  },
+  medal: {
+    designInfo:
+      "Race medal designs can be viewed on the Friday before the race on the Bishops Events Facebook page or our Instagram page.",   
+
+  },
+  results: {
+    liveUrl: "https://www.athlinks.com/event/360372/results/Event/1064713/Results",
+    runnerTrackingAvailable: true,
+    runnerTrackingInfoUrl:
+      "https://bishopsevents.com/wp-content/uploads/2024/04/Athlete.png",
+  },
+  awards: {
+    categories: [
+      "Top 3 Men and Women overall",
+      "1st & 2nd place Male and Female in these categories: 19&Under, 20-29, 30-39, 40-49, 50-59, 60-69, & 70+",
+    ],
+  },
+  photos: {
+    info: "Photos taken by staff will be posted on our Facebook page by Tuesday after the event.",
+    facebookPageUrl: "https://www.facebook.com/BishopsEvents",
+  },
+  socialMediaChallenge: {
+    instagram: "https://www.instagram.com/bishopseventsllc/",
+    facebook: "https://www.facebook.com/BishopsEvents",
+  },
+  packetPickup: {
+    options: [
+      {
+        location: "Road Runner Sports",
+        address: "1120 W. Broad St., Falls Church, VA 22046",
+        date: new Date('2024-10-11'),
+        time: "6:00 - 8:00 pm",
+      },
+      {
+        location: "Race Day at the event",
+        info: "We recommend arriving one hour before your event start time to check-in.",
+      },
+    ],
+  },
+  raceDayRegistration: {
+    available: true,
+    info: "Participants will need to arrive approximately one hour before the race to register for the event. T-shirt sizes cannot be guaranteed for race day registers.",   
+
+  },
+  restrooms: {
+    location: "At the far end of the parking lot from Shelter A",
+  },
+  volunteers: {
+    info: "Volunteers should arrive approximately 60 minutes before the first race kicks off. We will assign volunteer tasks on race morning (water station, course marshals, finish line support, etc). You can find parking information under “Directions to Parking” with a latitude and longitude pin for where to   
+ meet.",
+  },
+  weatherPolicy: {
+    info: "We are an all-weather race company (rain or shine or sleet or snow). We will email registered runners and post on social media if the race is cancelled, but this is quite rare, otherwise assume the race is taking place as scheduled. Weekly weather reports are posted on the Thursday before race weekends on our Facebook page by Chad Merrill with the Hagerstown Almanack. Race officials may delay, change or postpone the event due to weather conditions. All registered runners will be notified via email of any changes. In most cases, a decision is not made until the night before the race, and a decision could come as late as the morning   
+ of the event.",
+    facebookPageUrl: "https://www.facebook.com/BishopsEvents",
+  },
+  refundsTransfers: {
+    policyUrl: "https://bishopsevents.com/refundtransfer/",
+  },
+  other: ["Narrow Your Results: Forest Trail"],
+  eventCategories: ["5k", "10k", "Half-Marathon"],
+  eventTags: [
+    "burke lake",
+    "racin to beat cancer",
+    "10k",
+    "5k",
+    "half",
+  ],
+};
+</example>
