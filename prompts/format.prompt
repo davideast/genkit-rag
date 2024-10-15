@@ -5,15 +5,13 @@ config:
 input:
   schema: PageData
 output:
-  format: json
-  schema:
-    markdown: string
+  format: text
 ---
 
 Take this HTML below and turn it into the format of the markdown doc given the example below. 
 {{ name }}
 {{ description }}
-{{ details}}
+{{ details }}
 
 <example>
 # 2024 Racin' to Beat Cancer 5k, 10k, & Half

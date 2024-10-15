@@ -105,7 +105,9 @@ export const RaceSchema = z.object({
   eventTags: z.array(z.string()).optional(),
 });
 
-export const input = z.string().describe('Page URL')
+export const input = z.object({
+  markdown: z.string().describe('markdown content')
+})
 export const output = RaceSchema
 
 export type Race = z.infer<typeof RaceSchema>;

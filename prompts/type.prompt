@@ -3,15 +3,16 @@ model: googleai/gemini-1.5-flash-8b-latest
 config:
   temperature: 1.0
 input: 
-  schema: string
+  schema:
+    markdown: string
 output:
   format: json
   schema: RaceSchema
 ---
 
-Take the following markdown and convert it into an object with the shape shown in the example.
+Take the following markdown and convert it into an object with the shape shown in the example. Do not use the following example unless the event matches. Do not add any extra properties to the object.
 
-{{input}}
+{{markdown}}
 
 <example>
 {
